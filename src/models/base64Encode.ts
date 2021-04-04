@@ -1,10 +1,4 @@
-/**
- * @fileoverview
- * @author Kevin Almeida
- */
-
-
- export default function base64Encode(srt){
+export default function base64Encode(srt){
     if(typeof srt !== 'string'){
         if(typeof srt !== 'number'){
             srt = srt.toString();
