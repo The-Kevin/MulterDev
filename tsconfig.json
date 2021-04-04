@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "target": "es2020",
+        "outDir": "src/lib",
+        "sourceMap": true
+    }
+}
