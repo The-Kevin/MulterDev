@@ -1,7 +1,7 @@
 import {Router} from 'express';
 
-import multer from 'multer';
-import multerConfig from './config/multer.config';
+import uploadOne from './models/uploadOne';
+import base64 from './models/base64Encode';
 
 const routes = Router();
 
@@ -10,9 +10,9 @@ routes.route('/')
         res.send('this is a fucking test');
     });
 
-routes.route('/upload')
-    .post(multer(multerConfig).single('files'), (req, res) => {
-        res.send(req.file);
+routes.route('/uploadOne')
+    .post(uploadOne, (req, res) => {
+       res.send(base64(req.file));
     });
 
 
