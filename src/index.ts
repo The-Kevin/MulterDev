@@ -1,10 +1,10 @@
-const express = require('express');
+import express from 'express';
 import routes from './routes';
 
 const app = express();
 
-app.use(routes);
+app.use('/uploads', routes);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log('running...');
 });

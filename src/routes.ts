@@ -1,8 +1,8 @@
 import {Router} from 'express';
 
-import uploadOne from './models/uploadOne';
-import uploadMany from './models/uploadMany';
-import base64 from './models/base64Encode';
+import uploadOne from './middlewares/uploadOne';
+import uploadMany from './middlewares/uploadMany';
+import base64 from './middlewares/base64Encode';
 
 const routes = Router();
  
